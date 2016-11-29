@@ -141,9 +141,7 @@ $(document).ready(function(){
         $profileName.html(user.displayName);
         $profileEmail.html(user.email);
         $img.attr("src",user.photoURL);
-        $profileAge.html(user.uid.age);
-        $profileWork.html(user.uid.work);
-        $profileInfo.html(user.uid.info);
+
         dbUserid.once('child_added',function(snapshot){
           var data = snapshot.val();
           $profileAge.html(data.age);
