@@ -257,10 +257,12 @@ $(document).ready(function(){
     // LISTEN FOR KEYPRESS EVENT
     $messageField.keypress(function (e) {
       user = firebase.auth().currentUser;
-      if (e.keyCode == 13) {
+      var username = user.displayName;
+      var message = $messageField.val();
+      console.log("message : " +message);
+      if (e.keyCode == 13 && message != '') {
         //FIELD VALUES
-        var username = user.displayName;
-        var message = $messageField.val();
+
         console.log("username : "+username);
         console.log("message :"+message);
         console.log("pic :"+user.photoURL);
