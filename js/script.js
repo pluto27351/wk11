@@ -164,7 +164,7 @@ $(document).ready(function(){
           if(person == data.user){
             $messageElement.addClass("mine");
             $nameElement.addClass("usermessage");
-            $nameElement.text(username).append($('<img>',{class:'message-pic userpic',src:data.pic}));
+            $nameElement.append($('<img>',{class:'message-pic userpic',src:data.pic}));
             $messageElement.text(message).append($nameElement);
           }else{
             $nameElement.text(username).prepend($('<img>',{class:'message-pic',src:data.pic}));
